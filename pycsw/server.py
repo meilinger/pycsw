@@ -814,8 +814,7 @@ class Csw(object):
         if self.config.get('manager', 'transactions') != 'true':
             raise RuntimeError('CSW-T interface is disabled')
 
-        ipaddress = self.environ.get('HTTP_X_FORWARDED_FOR', '').split(',')[0]
-                or self.environ['REMOTE_ADDR']
+        ipaddress = self.environ.get('HTTP_X_FORWARDED_FOR', '').split(',')[0] or self.environ['REMOTE_ADDR']
 
         if not self.config.has_option('manager', 'allowed_ips') or \
         (self.config.has_option('manager', 'allowed_ips') and not

@@ -5,6 +5,7 @@ build
 dist
 docs/_build
 MANIFEST
+cite.db
 
 # testing artifacts
 tests/index.html
